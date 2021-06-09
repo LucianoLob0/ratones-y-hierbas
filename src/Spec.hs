@@ -5,7 +5,6 @@ import Test.Hspec
 
 correrTests :: IO ()
 correrTests = hspec $ do
-  describe "Test de ejemplo" $ do
-    it "El pdepreludat se instaló correctamente" $ do
-      doble 1 `shouldBe` 2
-
+  describe "lograEstabilizar" $ do
+    it "Comunidad con infinitos ratones, con uno que no queda estabilizado" $ do
+      lograEstabilizar (reduceFatFast 2) comunidadInfinita `shouldBe` False
